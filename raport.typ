@@ -49,11 +49,17 @@
 ]*/
 #label("Spis treści")
 #outline(title: "Spis treści", indent:  n => 1em * n, depth: 3)
+
+#pagebreak()
+
 = Ogólny opis zbioru
-abcd
+Zbiór danych zawiera informacje z eksperymentu "Speed Dating", który miał na celu zbadanie, jakie czynniki wpływają na decyzje dotyczące wyboru partnera. Eksperyment polegał na organizacji serii szybkich randek, podczas których uczestnicy mieli okazję poznać się nawzajem w krótkim czasie. Zbiór danych zawiera informacje o uczestnikach, ich preferencjach oraz wynikach randek.
+
+???
 
 = Określenie celu eksploracji i kryteriów sukcesu
-abcd
+????
+
 
 = Charakterystyka zbioru danych
 == Pochodzenie
@@ -81,8 +87,16 @@ abcd
   widths: (2, 1, 4),
   header: true,
   [Nazwa], [Typ], [Znaczenie], 
-  [nazwa1], [Numeryczny], [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.], 
-
+  [iid], [Numeryczny], [unikalny numer uczestnika],
+  [id], [Numeryczny], [numer uczestnika w ramach fali],
+  [gender], [Numeryczny], [płeć uczestnika (1 - mężczyzna, 0 - kobieta)],
+  [idg], [Numeryczny], [numer badanego w obrębie płci, grupy],
+  [condtn], [Numeryczny], [1=limited choice, 2=extensive choice],
+  [wave], [Numeryczny], [numer fali, w której uczestnik brał udział; dookreśla inne informacje],
+  [round], [Numeryczny], [numer rundy, w której uczestnik brał udział],
+  [position], [Numeryczny], [numer stacji, na której partnerzy poznali się],
+  [positin1], [Numeryczny], [numer stacji, na której zachęto zabawę],
+  [order], [Numeryczny], [ilość randek zadaniej nocy]
 
 )
 
