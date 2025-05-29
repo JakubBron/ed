@@ -902,7 +902,8 @@ Mediana: 0.0
 Przedział wartości występujących najczęściej: \
 [0.0; 0.0]
 
-Liczba punktów oddalonych: 690
+Liczba punktów oddalonych: 690 
+\ \ \ Atrybut binarny, wykres pudełkowy analizować ostrożnie.
 ])
 #table(columns: (auto, auto, auto), inset: 5pt, align: center, [samerace], figure(image("img/box_samerace.png"),), [
 Mediana: 0.0
@@ -911,6 +912,7 @@ Przedział wartości występujących najczęściej: \
 [0.0; 1.0]
 
 Liczba punktów oddalonych: 0
+\ \ \ Atrybut binarny, wykres pudełkowy analizować ostrożnie.
 ])
 #table(columns: (auto, auto, auto), inset: 5pt, align: center, [race_o], figure(image("img/box_race_o.png"),), [
 Mediana: 2.0
