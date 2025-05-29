@@ -58,7 +58,7 @@ Zbiór danych zawiera informacje z eksperymentu "Speed Dating", który miał na 
 _Celem uproszczenia opisu atrybutów, niektóre z nich mają w opisie pytania. Atrybut taki odpowiada na to pytanie._
 \ \ 
 W raporcie używa się słów i zwrotów: 
-- wydarzenie - jedno z 24 spotkań speed datingu
+- wydarzenie - jedno z 21 spotkań speed datingu
 - runda / randka / rozmowa - spotkanie dwóch osób i rozmowa między nimi, tzw. randka
 - uczestnik - osoba biorąca udział w wydarzeniu, uczestnik rozmowy; kobieta lub mężczyzna
 - 6. cech - sześć cech, które były badane w eksperymencie: atrakcyjność fizyczna, szczerość, inteligencja, poczucie humoru (fun), ambicja, wspólne zainteresowania/hobby
