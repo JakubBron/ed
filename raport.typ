@@ -270,7 +270,7 @@ Almost never=7],
 
 
 = Wyniki eksploracyjnej analizy danych
-== Rozkłady wartości atrybutów
+== Rozkłady wartości atrybutów (histogramy)
 #table(columns: (auto, auto), inset: 5pt, align: center, [attr1_1], figure(image("img/hist_attr1_1.png", height: 40%),))
 #table(columns: (auto, auto), inset: 5pt, align: center, [sinc1_1], figure(image("img/hist_sinc1_1.png", height: 40%),))
 #table(columns: (auto, auto), inset: 5pt, align: center, [intel1_1], figure(image("img/hist_intel1_1.png", height: 40%),))
@@ -341,8 +341,8 @@ Almost never=7],
 #table(columns: (auto, auto), inset: 5pt, align: center, [length], figure(image("img/hist_length.png", height: 40%),))
 #table(columns: (auto, auto), inset: 5pt, align: center, [numdat_2], figure(image("img/hist_numdat_2.png", height: 40%),))
 
-// korelacje
-
+// wykresy pudełkowe
+== Punkty oddalone i rozkłady wartości atrybutów (wykresy pudełkowe)
 #table(columns: (auto, auto, auto), inset: 5pt, align: center, [attr1_1], figure(image("img/box_attr1_1.png"),), [
 Mediana: 20.0
 
@@ -930,16 +930,52 @@ Liczba punktów oddalonych: 457
 
 = Wnioski
 == Wnioski dotyczące danych
-TODO
+*1. Wiek uczestników* 
+- Większość uczestników mieściła się w przedziale wiekowym 20-30 lat, co jest charakterystyczne dla studentów MBA. Ten przedział wiekowy może wpływać na preferencje i priorytety romantyczne, a także na ogólną dynamikę eksperymentu.
+
+
+*2. Ambicja jako atrybut*
+- Przed wydarzeniem histogram oceny ambicji wskazywał, że około 2/3 uczestników oceniło ambicję partnerów na mniej niż 10 punktów w skali 0-100. Był to rozkład lewoskośny, z pozostałą częścią ocen rozłożoną między 10 a 20 punktów.
+- Dzień po wydarzeniu znaczenie ambicji u partnerów wzrosło — ponad połowa uczestników uznała ją za istotną, a wykres zmienił charakter na wycentrowany, z dwoma wyraźnymi szczytami w końcowych przedziałach 0-20 punktów (większość ocen poniżej 10).
+- Ocena własnej ambicji uczestników pozostała stabilna, z prawoskośnym rozkładem wskazującym na wysoką samoocenę w tej kategorii.
+
+*3. Zainteresowania i aktywności*
+- Rozkład zainteresowań uczestników w większości był prawostronnie skierowany (więcej ocen na niższym poziomie).
+- Wyjątkami były kategorie filmów (wysokie zainteresowanie, centralny rozkład) oraz gier komputerowych (gaming), które cechowały się niskim poziomem zainteresowania wśród uczestników.
+
+*4. Atrakcyjność jako atrybut*
+- Przed randkami uczestnicy oceniali atrakcyjność partnerów w skali 1–10. Rozkład był nieco prawoskośny, z ocenami najczęściej wynoszącymi 5, 6, 7 lub 8, a średnia wynosiła 6 14 punktów.
+- W skali 0–100 rozkład punktów był lewoskośny, z większością ocen koncentrujących się w przedziale 15-30 punktów. Atrybut atrakcyjności często otrzymywał najwięcej punktów w ramach dostępnej puli. Średnia wynosiła 24,12 punktów, a w skrajnych przypadkach osiągała nawet 100 punktów.
+- Po wydarzeniu rozkład znaczenia atrakcyjności uległ zmianie. Skrajne przypadki wzrosły do około 80 punktów, a minimalne znaczenie podniosło się z 0 do 10 punktów. Średnia wzrosła do 28,64 punktów.
+
+*5. Szczerość i clubbing*
+- Histogramy cech takich jak szczerość oraz zainteresowanie clubbingiem zawierały najbardziej odległe punkty w rozkładzie. - Większość uczestników była zainteresowana clubbingiem, co pokazał wyraźny szczyt rozkładu w wysokich przedziałach. Tylko niewielki odsetek uczestników ocenił swoje zainteresowanie tą aktywnością na minimalnym poziomie (1 w skali 0–10)
+
+*6. Częstotliwość randek*
+- Najczęstsze odpowiedzi uczestników na pytanie o częstotliwość randek mieściły się w przedziale od „dwa razy w miesiącu” do „kilka razy w roku”. Średnia oscylowała wokół wartości „raz w miesiącu”.
+
+
+*7. Szczerość jako wartość w relacjach*
+- Dzień po spotkaniach szczerość była niżej oceniana jako istotna cecha u potencjalnego partnera przeciwnej płci. Średnia ocena spadła z 17,29 punktów do 15,57 punktów w skali 0–100.
+-  Może to sugerować, że w krótkich interakcjach, takich jak 4-minutowe randki, inne cechy (np. atrakcyjność lub wspólne zainteresowania) zyskują na znaczeniu, przesuwając uwagę uczestników z wartości takich jak szczerość.
+
+
+*8. Czas trwania spotkań*
+- Większość uczestników uważała, że czas trwania 4-minutowych randek był zbyt krótki, co potwierdza analiza odpowiedzi. Mediana odpowiedzi wskazywała na potrzebę dłuższych interakcji.
+- Drugą najczęściej wybieraną opcją była odpowiedź, że czas randki był „idealny”,
+co sugeruje pewną grupę uczestników zadowoloną z formatu wydarzenia.
+- Jedynie niewielki odsetek uczestników (około 7%) uznał, że spotkania były zbyt długie. Może to wskazywać na różne potrzeby i oczekiwania uczestników wobec formatu randek.
+
 
 == Korelacje między wartościami atrybutów
-TODO
+Z uwagi na olbrzymią ilość atrubów, wygenerowano korelację tylko dla kilku z nich. Dla przykładu prezentujemy korelacje między zainteresowaniami poszczególnych uczestników. 
 
 #figure(
   image("img/corr_activities.png"),
-	caption: "Macierz korelacji."
+	caption: "Macierz korelacji atrybutów związaych z zainteresowaniami."
 )
 
+Warto wspomnieć, że niemożliwe jest wyznaczenie korelacji wszystkich atrybutów przez fakt występowania danych tekstowych (zbiór fraz) lub ich mapowania na liczby. W takim przypadku korelacja nie niesie żadnych sensowych informacji.  
 
 
 = Uwagi na temat jakości danych
@@ -953,7 +989,7 @@ Istnieje dość sporo atrybutów, dla których wartości są niespójne. Spowodo
 W zbiorze występują atrybuty, których znaczenie nie jest jasne. Przykładem jest atrybut 'prob_o', który nie jest opisany w dokumentacji zbioru danych. Wartości tego atrybutu są liczbami z przedziału [1, 10], ale nie wiadomo, co one oznaczają. Kolejnym przykładem jest atrybut 'met_o', który również nie jest opisany w dokumentacji zbioru danych. 
 
 == Punkty oddalone
-TODO
+Prezentowane na wykresach pudełkowych powyżej, w sekcji 
 
-= Podsumowanie
-TODO
+= Podsumowanie i wnioski ogólne:
+Analiza danych wskazuje, że krótkie interakcje podczas wydarzenia wyraźnie wpływają na ewolucję ocen atrybutów, takich jak atrakcyjność czy ambicja, które zyskują na znaczeniu po bezpośrednim kontakcie. Szczerość była oceniana niżej dzień po spotkaniach, co może wynikać z ograniczonego czasu na głębsze poznanie. Różnorodność preferencji uczestników w zakresie czasu trwania spotkań oraz zainteresowań sugeruje potrzebę lepszego dostosowania formatu wydarzenia, aby uwzględnić oczekiwania różnych grup.
