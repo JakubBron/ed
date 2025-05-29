@@ -100,7 +100,7 @@ for name in names_all:
     data[name].plot.hist(title=f"Histogram atrybutu {name}", xlabel=name, ylabel="Liczba próbek", ec='white')
     plt.savefig(path)
 
-    doc.append(f"#table(columns: (auto, auto), inset: 5pt, align: center, [{name}], figure(image(\"{str(path)}\", height: 40%),))")
+    doc.append(f"#table(columns: (auto, auto), inset: 5pt, align: center, [{name}], figure(image(\"{str(path)}\"),))")
 
 for name in names_all:
     print("box", name)
@@ -117,7 +117,7 @@ for name in names_all:
     desc = f"""
 Mediana: {round(desc_n["50%"], 2)}
 
-Przedział wartości występujących najczęściej: \\
+Przedział wartości występujących najczęściej:
 [{desc_n["25%"]}; {desc_n["75%"]}]
 
 Liczba punktów oddalonych: {int(outliers.count())}
@@ -137,5 +137,29 @@ def plot_corr(names, name):
     doc.append(f"#figure(image(\"{str(path)}\"))")
 
 plot_corr(names_prop_activities, "activities")
+
+plot_corr(names_prop1_1, "1_1")
+
+plot_corr(names_prop1_2, "1_2")
+
+plot_corr(names_prop2_1, "2_1")
+
+plot_corr(names_prop3_1, "3_1")
+
+plot_corr(names_prop3_2, "2_1")
+
+plot_corr(names_prop_o, "o")
+
+plot_corr(names_prop_pf_o, "pf_o")
+
+plot_corr([
+    *names_prop1_1,
+    *names_prop1_2,
+    *names_prop2_1,
+    *names_prop3_1,
+    *names_prop3_2,
+    *names_prop_o,
+    *names_prop_pf_o,
+], "scores")
 
 Path("a.typ").write_text("\n".join(doc))

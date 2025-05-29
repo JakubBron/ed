@@ -91,6 +91,7 @@ https://www.kaggle.com/datasets/annavictoria/speed-dating-experiment
 == Ilość zbiorów danych
 1
 
+#pagebreak()
 
 = Opis atrybutów
 Opis atrybutów przedstawia poniższa tabela. Warto nadmienić, że przez zbieranie danych o preferencjach nawet do 3-4 tygodni po zakończeniu wydarzenia i opublikowaniu rezultatów szybkich randek nie dla każdego zestawu parametrów jest dostępna pełna informacja. 
@@ -936,7 +937,7 @@ Liczba punktów oddalonych: 457
 
 *2. Ambicja jako atrybut*
 - Przed wydarzeniem histogram oceny ambicji wskazywał, że około 2/3 uczestników oceniło ambicję partnerów na mniej niż 10 punktów w skali 0-100. Był to rozkład lewoskośny, z pozostałą częścią ocen rozłożoną między 10 a 20 punktów.
-- Dzień po wydarzeniu znaczenie ambicji u partnerów wzrosło — ponad połowa uczestników uznała ją za istotną, a wykres zmienił charakter na wycentrowany, z dwoma wyraźnymi szczytami w końcowych przedziałach 0-20 punktów (większość ocen poniżej 10).
+- Dzień po wydarzeniu znaczenie ambicji u partnerów wzrosło — ponad połowa uczestników uznała ją za istotną, a wykres zmienił charakter na wycentrowany, z dwoma wyraźnymi szczytami w końcowych przedziałach 0-20 punktów (większość ocen powyżej 10).
 - Ocena własnej ambicji uczestników pozostała stabilna, z prawoskośnym rozkładem wskazującym na wysoką samoocenę w tej kategorii.
 
 *3. Zainteresowania i aktywności*
@@ -944,12 +945,12 @@ Liczba punktów oddalonych: 457
 - Wyjątkami były kategorie filmów (wysokie zainteresowanie, centralny rozkład) oraz gier komputerowych (gaming), które cechowały się niskim poziomem zainteresowania wśród uczestników.
 
 *4. Atrakcyjność jako atrybut*
-- Przed randkami uczestnicy oceniali atrakcyjność partnerów w skali 1–10. Rozkład był nieco prawoskośny, z ocenami najczęściej wynoszącymi 5, 6, 7 lub 8, a średnia wynosiła 6 14 punktów.
+- Przed randkami uczestnicy oceniali atrakcyjność partnerów w skali 1–10. Rozkład był nieco prawoskośny, z ocenami najczęściej wynoszącymi 5, 6, 7 lub 8, a średnia wynosiła 6,x14 punktów.
 - W skali 0–100 rozkład punktów był lewoskośny, z większością ocen koncentrujących się w przedziale 15-30 punktów. Atrybut atrakcyjności często otrzymywał najwięcej punktów w ramach dostępnej puli. Średnia wynosiła 24,12 punktów, a w skrajnych przypadkach osiągała nawet 100 punktów.
 - Po wydarzeniu rozkład znaczenia atrakcyjności uległ zmianie. Skrajne przypadki wzrosły do około 80 punktów, a minimalne znaczenie podniosło się z 0 do 10 punktów. Średnia wzrosła do 28,64 punktów.
 
 *5. Szczerość i clubbing*
-- Histogramy cech takich jak szczerość oraz zainteresowanie clubbingiem zawierały najbardziej odległe punkty w rozkładzie. - Większość uczestników była zainteresowana clubbingiem, co pokazał wyraźny szczyt rozkładu w wysokich przedziałach. Tylko niewielki odsetek uczestników ocenił swoje zainteresowanie tą aktywnością na minimalnym poziomie (1 w skali 0–10)
+- Histogramy cech takich jak szczerość oraz zainteresowanie clubbingiem zawierały najbardziej odległe punkty w rozkładzie. - Większość uczestników była zainteresowana clubbingiem, co pokazał wyraźny szczyt rozkładu w wysokich przedziałach. Tylko niewielki odsetek uczestników ocenił swoje zainteresowanie tą aktywnością na minimalnym poziomie (1 w skali 0–10).
 
 *6. Częstotliwość randek*
 - Najczęstsze odpowiedzi uczestników na pytanie o częstotliwość randek mieściły się w przedziale od „dwa razy w miesiącu” do „kilka razy w roku”. Średnia oscylowała wokół wartości „raz w miesiącu”.
@@ -959,11 +960,11 @@ Liczba punktów oddalonych: 457
 - Dzień po spotkaniach szczerość była niżej oceniana jako istotna cecha u potencjalnego partnera przeciwnej płci. Średnia ocena spadła z 17,29 punktów do 15,57 punktów w skali 0–100.
 -  Może to sugerować, że w krótkich interakcjach, takich jak 4-minutowe randki, inne cechy (np. atrakcyjność lub wspólne zainteresowania) zyskują na znaczeniu, przesuwając uwagę uczestników z wartości takich jak szczerość.
 
+#pagebreak()
 
 *8. Czas trwania spotkań*
 - Większość uczestników uważała, że czas trwania 4-minutowych randek był zbyt krótki, co potwierdza analiza odpowiedzi. Mediana odpowiedzi wskazywała na potrzebę dłuższych interakcji.
-- Drugą najczęściej wybieraną opcją była odpowiedź, że czas randki był „idealny”,
-co sugeruje pewną grupę uczestników zadowoloną z formatu wydarzenia.
+- Drugą najczęściej wybieraną opcją była odpowiedź, że czas randki był „idealny”, co sugeruje pewną grupę uczestników zadowoloną z formatu wydarzenia.
 - Jedynie niewielki odsetek uczestników (około 7%) uznał, że spotkania były zbyt długie. Może to wskazywać na różne potrzeby i oczekiwania uczestników wobec formatu randek.
 
 
@@ -971,9 +972,45 @@ co sugeruje pewną grupę uczestników zadowoloną z formatu wydarzenia.
 Z uwagi na olbrzymią ilość atrubów, wygenerowano korelację tylko dla kilku z nich. Dla przykładu prezentujemy korelacje między zainteresowaniami poszczególnych uczestników. 
 
 #figure(
-  image("img/corr_activities.png"),
+  image("img/corr_activities.png", height: 40%),
 	caption: "Macierz korelacji atrybutów związaych z zainteresowaniami."
 )
+
+#figure(
+  image("img/corr_1_1.png", height: 40%),
+	caption: "Macierz korelacji atrybutów istotności każdej z 6. cech, której dana osoba poszukuje u partnera."
+)
+
+#figure(
+  image("img/corr_1_2.png", height: 40%),
+	caption: "Macierz korelacji istotności cech w kontekście: czego uczestnik poszukiwał u partnera płci przeciwnej."
+)
+
+
+#figure(
+  image("img/corr_2_1.png", height: 40%),
+	caption: "Macierz korelacji istotności poszukiwania na randce danej cechy przez płeć przeciwną (własna opinia o preferencjach innych)."
+)
+
+
+#figure(
+  image("img/corr_o.png", height: 40%),
+	caption: "Macierz korelacji istotności danej cechy pod względem preferencji partnera."
+)
+
+
+#figure(
+  image("img/corr_pf_o.png", height: 40%),
+	caption: "Macierz korelacji istotności danej cechy pod względem preferencji uczestnika (przed randkowaniem)."
+)
+
+
+#figure(
+  image("img/corr_scores.png", height: 40%),
+	caption: "Macierz korelacji istotności cech - ocena przed wydarzeniem, 1 dzień po wydarzeniu dla partnera jak i uczestnika."
+)
+
+
 
 Warto wspomnieć, że niemożliwe jest wyznaczenie korelacji wszystkich atrybutów przez fakt występowania danych tekstowych (zbiór fraz) lub ich mapowania na liczby. W takim przypadku korelacja nie niesie żadnych sensowych informacji.  
 
@@ -983,13 +1020,14 @@ Warto wspomnieć, że niemożliwe jest wyznaczenie korelacji wszystkich atrybut�
 W zbiorze danych występują atrybuty, dla których nie ma wartości w całej kolumnie danych (tj. dla każdego uczestnika). Istnieje całkiem dużo atrybutów, dla których pomiarów nie prowadzono w pierwszych wydarzeniach. Atrybuty, których wartości zdobywa się po długim czasie od wydarzenia, również mogą mieć brakujące wartości (np. shar2_2, brak danych dla blisko 25% wszystkich przypadków).
 
 == Dane niespójne
-Istnieje dość sporo atrybutów, dla których wartości są niespójne. Spowodowane jest to czasową zmianą skali ocen. Dla przykładu: atrybuty kończące się "1_2" są mierzone inną skalą w wydarzeniach odbywających się w okolicach 1/3 czasy trwania eksperymentu. Warto odnotować, że w tych przypadkach wartości ze skali ocen pokrywają się np. ocena w skali 1-10 i podział 100 punktów. Bez dodatkowej wiedzy nt. spotkań nie sposób odróżnić od siebie obydwie skale oceniania.
+Istnieje dość sporo atrybutów, dla których wartości są niespójne. Spowodowane jest to czasową zmianą skali ocen. Dla przykładu: atrybuty kończące się "1_2" są mierzone inną skalą w wydarzeniach odbywających się w okolicach 1/3 czasu trwania eksperymentu. Warto odnotować, że w tych przypadkach wartości ze skali ocen pokrywają się np. ocena w skali 1-10 i podział 100 punktów. Bez dodatkowej wiedzy nt. spotkań nie sposób odróżnić od siebie obydwie skale oceniania. \ \
+Inny problem, utrudniający "przyzywyczajenie się" do danych to niespójność mapowania wartości binarnych na wartości liczbowe. Dla części parametrów obowiązuje podział _0 lub 1_ a dla innych _1 lub 2_. Dla przykładu: atrybut 'samerace' typu Tak/Nie mapowany do _0 lub 1_ oraz "met" typu Tak/Nie mapowany do _1 lub 2_.
 
 == Dane niezrozumiałe
 W zbiorze występują atrybuty, których znaczenie nie jest jasne. Przykładem jest atrybut 'prob_o', który nie jest opisany w dokumentacji zbioru danych. Wartości tego atrybutu są liczbami z przedziału [1, 10], ale nie wiadomo, co one oznaczają. Kolejnym przykładem jest atrybut 'met_o', który również nie jest opisany w dokumentacji zbioru danych. 
 
 == Punkty oddalone
-Prezentowane na wykresach pudełkowych powyżej, w sekcji 
+Prezentowane na wykresach pudełkowych powyżej, w sekcji 5.2.
 
 = Podsumowanie i wnioski ogólne:
 Analiza danych wskazuje, że krótkie interakcje podczas wydarzenia wyraźnie wpływają na ewolucję ocen atrybutów, takich jak atrakcyjność czy ambicja, które zyskują na znaczeniu po bezpośrednim kontakcie. Szczerość była oceniana niżej dzień po spotkaniach, co może wynikać z ograniczonego czasu na głębsze poznanie. Różnorodność preferencji uczestników w zakresie czasu trwania spotkań oraz zainteresowań sugeruje potrzebę lepszego dostosowania formatu wydarzenia, aby uwzględnić oczekiwania różnych grup.
