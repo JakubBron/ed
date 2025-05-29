@@ -971,26 +971,35 @@ Liczba punktów oddalonych: 457
 
 
 == Korelacje między wartościami atrybutów
-Z uwagi na olbrzymią ilość atrubów, wygenerowano korelację tylko dla kilku z nich. Dla przykładu prezentujemy korelacje między zainteresowaniami poszczególnych uczestników. 
+Z uwagi na olbrzymią ilość atrubów, wygenerowano korelację tylko dla kilku z nich. Mimo to, udało się wyciągnąć z nich kilka ciekawych wniosków (macierze poniżej, opis tylko do ciekawszych wyników). 
+\ \ 
+Macierz korelacji w danych Speed Dating wskazuje na interesujące zależności między preferencjami uczestników. Najczęściej wspólnie cenionymi atrybutami były sztuka i muzea, które wykazują wysoką korelację, podobnie jak koncerty i muzyka, co sugeruje, że osoby zainteresowane jedną z tych dziedzin mają tendencję do doceniania również innych związanych z kulturą i rozrywką.
+Z kolei sport był najmniej skorelowanym atrybutem, wykazując jedynie słabą korelację z takimi czynnikami jak TV sportowa, ćwiczenia czy gaming. Wskazuje to na stosunkowo izolowane preferencje w tej kategorii, co może odzwierciedlać bardziej wyspecjalizowane zainteresowania.
+Najwięcej wspólnych korelacji odnotowano wśród kategorii takich jak jedzenie, muzea, sztuka oraz zakupy, co sugeruje, że te aktywności są postrzegane jako uniwersalne elementy stylu życia, które łatwo znajdują wspólny grunt między różnymi uczestnikami. Tego typu dane mogą być szczególnie użyteczne w analizie dopasowania uczestników na podstawie wspólnych zainteresowań, co jest kluczowe w kontekście wydarzeń typu speed dating.
 
 #figure(
   image("img/corr_activities.png", height: 40%),
 	caption: "Macierz korelacji atrybutów związaych z zainteresowaniami."
 )
 
+#pagebreak()
+
+Macierz korelacji pokazuje, że nie występują silne zależności pomiędzy analizowanymi cechami – wszystkie współczynniki korelacji poza przekątną są poniżej 0,6. Najwyższe korelacje zaobserwowano między poczuciem humoru a atrakcyjnością fizyczną, ambicją a inteligencją, oraz między poczuciem humoru a ambicją. Z kolei najniższą korelację widać między atrakcyjnością a szczerością, co sugeruje, że osoby uważające się za atrakcyjne niekoniecznie postrzegają siebie jako szczere. Ogólnie cechy te mają względnie niezależny charakter, co oznacza, że uczestnicy różnicowali swoje samooceny w zależności od konkretnego atrybutu.
 #figure(
-  image("img/corr_1_1.png", height: 40%),
+  image("img/corr_1_1.png"),
 	caption: "Macierz korelacji atrybutów istotności każdej z 6. cech, której dana osoba poszukuje u partnera."
 )
 
+#pagebreak()
+Macierz korelacji wskazuje, że zależności między ocenianymi cechami są słabe lub umiarkowane. Najwyższą korelację można zaobserwować między ambicją a wspólnymi zainteresowaniami, co sugeruje, że osoby przykładające wagę do ambicji partnera często zwracają również uwagę na podobieństwo hobby. Zauważalna jest także umiarkowana dodatnia korelacja między szczerością a większością pozostałych cech. Natomiast atrakcyjność fizyczna oraz wspólne zainteresowania cechują się niską lub nawet ujemną korelacją z pozostałymi cechami, co może świadczyć o ich odmiennym charakterze w ocenie partnera. Warto również zwrócić uwagę, że niektóre korelacje są ujemne, choć niezbyt silne, co wskazuje na zróżnicowane podejście uczestników do wartościowania poszczególnych cech.
 #figure(
-  image("img/corr_1_2.png", height: 40%),
+  image("img/corr_1_2.png"),
 	caption: "Macierz korelacji istotności cech w kontekście: czego uczestnik poszukiwał u partnera płci przeciwnej."
 )
 
 
 #figure(
-  image("img/corr_2_1.png", height: 40%),
+  image("img/corr_2_1.png"),
 	caption: "Macierz korelacji istotności poszukiwania na randce danej cechy przez płeć przeciwną (własna opinia o preferencjach innych)."
 )
 
