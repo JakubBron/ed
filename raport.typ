@@ -1018,7 +1018,7 @@ Macierz korelacji wskazuje, że zależności między ocenianymi cechami są sła
 
 #figure(
   image("img/corr_scores.png", height: 40%),
-	caption: "Macierz korelacji istotności cech - ocena przed wydarzeniem, 1 dzień po wydarzeniu dla partnera jak i uczestnika."
+	caption: "Macierz korelacji istotności cech - ocena: przed wydarzeniem, 1 dzień po wydarzeniu; zarówno dla partnera jak i uczestnika."
 )
 
 
