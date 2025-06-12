@@ -75,35 +75,96 @@ Kryteria sukcesu, które zostaną przyjęte w celu oceny skuteczności eksplorac
 - przeprowadzenie analizy istotności atrybutów ze wskazaniem najistotniejszego
 
 
-= Dyskusja kroków dalszego postępowania
-== Założenia wstępne
-< opisać, jeśli są lub brak >
-
-== Testowanie wyników
-< cośtam >
+= Założenia wstępne
+Zakładamy, że z racji na olbrzymią ilość kolumn oraz stosunkowo niewielką liczbę wierszy danych najlepiej sprawdzi się klasyfikator oparty na drzewie decyzyjnym. \
+Kolejnym agrumentem za drzewami decyzyjnym jest ich metodyka pracy, przewidują one wartość żądanego atrybutu w oparciu o inne atrybuty i potrafią zbudować ścieżki zależności między parametrami. Odpowie nam to na jedno z pytań - celi.
 
 
 = Przygotowanie danych
 == Dane brakujące i dane do ujednolicenia
-< usunąć, jeśli nie występują>
+Nie wystąpiła potrzeba uzupełnienia brakujących danych.
 
 == Zamiana na nominalne/numeryczne
-< usunąć, jeśli nie występuje>
+Dla wybranych cech nie było takiej potrzeby.
 
 == Podzbiór danych
-< krótki opis podziboru danych, który analizowaliśmy >
+Wybrano dane z wydarzeń speed datingu o numerach: 1-5, 10-11, 15-17. Zdecydowano się na te edycje, gdyż zostały one przeprowadzone w tych samych warunkach a sposób oceniania preferencji polegał na rozdziale 100 punktów między kategorie. W innych edycjach warunki przeprowadzenia eksperymenty były inne, znacznie różniące się. Wybranie innych edycji zakłóciłoby porównywanie wyników i wyciągnięcie rzetelnych wniosków. \
 
 = Wyniki i model
 == Krótki opis modelu
-< do opisania, uwzględnić parametry modelu >
+Wykorzystano model DecisionTreeClassifier z biblioteki scikit learn. Model ten implementuje drzewo decyzyjne. \
+Model ten przyjmuje postać drzewa binarnego, w którym każdy węzeł odpowiada decyzji podjętej na podstawie jednej z cech opisujących dane, natomiast liść drzewa reprezentuje końcową prognozę – przypisanie do jednej z klas. Uczenie drzewa decyzyjnego polega na rekurencyjnym dzieleniu przestrzeni cech w taki sposób, aby w kolejnych krokach uzyskiwać podzbiory jak najbardziej jednorodne pod względem klas decyzyjnych. Ocenę jakości podziału realizuje się przez atrybut Gini. Wysokość drzewa może być ograniczona, tutaj nie jest. 
+
+== Parametry modelu
+Do odpowiedzenia na pytanie użyto preferencji nt. aktywności wykonywanych przez uczestników. Dane zostały przetasowane losowo a następnie podzielone na zbiór treningowy i testowy w proporcji 80% do 20%. \
+
+== Ewaluacja wyników
+Rezultaty pracy modelu zostały ocenione na podstawie wskaźników: 
+- precision (precyzja) - miara dokładności klasyfikacji, określająca, ile z przewidzianych pozytywnych przypadków jest rzeczywiście pozytywnych,
+- recall (czułość) - miara zdolności modelu do wykrywania pozytywnych przypadków, określająca, ile z rzeczywistych pozytywnych przypadków zostało poprawnie przewidzianych, 
+- F1-score - miara łącząca precyzję i czułość, która jest szczególnie przydatna w przypadku nierównomiernych klas (który tu występuje).
+\
+Wygenerowano również confusion matrix (macierz pomyłek), która pokazuje jakość przewidywań (obrazuje trafienie, poprawne odrzucenie, chybienie i fałszywe alarmy). 
+
 
 == Wyniki osiągnięte przez model
-< wyniki, może być w formie tabeli > \
-< jeśli drzewo, wstawić obrazek drzewa >
+Wygenerowano wykres ważności cech, w zależności od kontekstu. Konteksty obejmowały: tego szukam u partnera/partnerki (atrybuty xxxx1_1), tego szuka płeć przeciwna (atrybuty xxxx2_1), własna ocena (atrybuty xxxx3_1). Do zakresu analizy dodatno również częstotliwość uczęszczania na randki i imprezy. \
+#figure(
+  image("próba 1/importance.png"),
+	caption: "Wykres ważności cech wpływający na przewidywanie, czy uczestnicy przypadną sobie do gustu (match będzie zrealizowany)."
+)
+
+Wygenerowano także macierz pomyłek dla zbiorów: testowego i treningowego.
+#figure(
+  image("próba 1/confusion_matrix_test.png"),
+	caption: "Macierz pomyłek dla zbioru testowego."
+)
+
+#figure(
+  image("próba 1/confusion_matrix_train.png"),
+	caption: "Macierz pomyłek dla zbioru treningowego."
+)
+
+Powstało również drzewo decyzyjne, niestety z większością liści dających rezultat "brak dopasowania" :(. \
+Ścieżki dające pozytywny scenariusz zakończone są liśćmi w odcieniach niebieskiego.
+#figure(
+  image("próba 1/tree.svg"),
+	caption: "Drzewo decyzyjne."
+)
+
+
+< Opis wyników >
+
 
 = Optymalizacja modelu 
-< opis zmian i optymalizacji: co, dlaczego, na ile ustawiono, inny podzbiór danych > \
-< dodatkowe podpunkty w miarę potrzeb >
+Przeprowadzono drugie badanie z użyciem tego samego modelu, ale innych parametrów. Tym razem wybrano ocenę chęci zaangażowania się w jakąś aktywność pozanaukową. 
+#figure(
+  image("próba 2/importance.png"),
+	caption: "Wykres ważności cech wpływający na przewidywanie, czy uczestnicy przypadną sobie do gustu (match będzie zrealizowany)."
+)
+
+Wygenerowano także macierz pomyłek dla zbiorów: testowego i treningowego.
+#figure(
+  image("próba 2/confusion_matrix_test.png"),
+	caption: "Macierz pomyłek dla zbioru testowego."
+)
+
+#figure(
+  image("próba 2/confusion_matrix_train.png"),
+	caption: "Macierz pomyłek dla zbioru treningowego."
+)
+
+Powstało również drzewo decyzyjne, niestety z większością liści dających rezultat "brak dopasowania" :(. \
+Ścieżki dające pozytywny scenariusz zakończone są liśćmi w odcieniach niebieskiego.
+#figure(
+  image("próba 2/tree.svg"),
+	caption: "Drzewo decyzyjne."
+)
+
+
+< Opis wyników >
+
+
 
 = Wnioski
 < wnioski końcowe, osiągnięte wyniki, komentarz, jakie parametry były najlepsze >
