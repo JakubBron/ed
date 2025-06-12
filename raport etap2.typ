@@ -102,12 +102,78 @@ Do odpowiedzenia na pytanie użyto preferencji nt. aktywności wykonywanych prze
 Rezultaty pracy modelu zostały ocenione na podstawie wskaźników: 
 - precision (precyzja) - miara dokładności klasyfikacji, określająca, ile z przewidzianych pozytywnych przypadków jest rzeczywiście pozytywnych,
 - recall (czułość) - miara zdolności modelu do wykrywania pozytywnych przypadków, określająca, ile z rzeczywistych pozytywnych przypadków zostało poprawnie przewidzianych, 
-- F1-score - miara łącząca precyzję i czułość, która jest szczególnie przydatna w przypadku nierównomiernych klas (który tu występuje).
+- F1-score - miara łącząca precyzję i czułość, która jest szczególnie przydatna w przypadku nierównomiernych klas (który tu występuje),
+- Support - ilość próbek zadanej klasy.
 \
-Wygenerowano również confusion matrix (macierz pomyłek), która pokazuje jakość przewidywań (obrazuje trafienie, poprawne odrzucenie, chybienie i fałszywe alarmy). 
+=== Próba nr 1
+#table(
+  columns: ( auto, auto, auto, auto, auto),
+  align: left,
+  [Badana klasa], [Precision], [Recall], [F1-score], [Support],
+  [0 - brak dopasowania], [0.83], [0.97], [0.90], [650],
+  [1 - jest dopasowanie], [0.42], [0.09], [0.15], [140],
+  [Accuracy], [-], [-], [0.82], [790],
+  [Macro avg], [0.63], [0.53], [0.52], [790],
+  [Weighted avg], [0.76], [0.82], [0.77], [790],
+)
+_Tab. 1 \ 
+Miary jakości modelu dla zbioru testowego. Próba numer 1_ \ \
+
+Widać, że dla zbioru testowego dokładność wskazania braku dopasowania jest na wysokim poziomie, czego nie można powiedzieć dla wskazania dobrego dopasowania. 
+
+#table(
+  columns: (auto, auto, auto, auto, auto),
+  align: left,
+  [Badana klasa], [Precision], [Recall], [F1-score], [Support],
+  [0 - brak dopasowania], [0.85], [0.98], [0.91], [2610],
+  [1 - jest dopasowanie], [0.65], [0.17], [0.27], [550],
+  [Accuracy], [-], [-], [0.84], [3160],
+  [Macro avg], [0.75], [0.57], [0.59], [3160],
+  [Weighted avg], [0.81], [0.84], [0.80], [3160],
+)
+_Tab. 2 \ 
+Miary jakości modelu dla zbioru treningowego Próba numer 1._
+\ \
+W zbiorze treningowym model radzi sobie dużo lepiej niż w przypadku zbioru testowego.  
+
+=== Próba nr 2
+
+#table(
+  columns: ( auto, auto, auto, auto, auto),
+  align: left,
+  [Badana klasa], [Precision], [Recall], [F1-score], [Support],
+  [0 - brak dopasowania], [0.86], [0.98], [0.92], [669],
+  [1 - jest dopasowanie], [0.61], [0.14], [0.23], [121],
+  [Accuracy], [-], [-], [0.85], [790],
+  [Macro avg], [0.74], [0.56], [0.57], [790],
+  [Weighted avg], [0.82], [0.85], [0.81], [790],
+)
+_Tab. 3 \ 
+Miary jakości modelu dla zbioru testowego. Próba numer 2_ \ \
+
+Wnioski podobne jak przy próbie 1. Widać, że dla zbioru testowego dokładność wskazania braku dopasowania jest na wysokim poziomie, wzrosła też dokładność dopasowania. Pozostałe parametry uległy poprawie wzgl. próby 1.
+
+#table(
+  columns: (auto, auto, auto, auto, auto),
+  align: left,
+  [Badana klasa], [Precision], [Recall], [F1-score], [Support],
+  [0 - brak dopasowania], [0.84], [0.99], [0.91], [2591],
+  [1 - jest dopasowanie], [0.67], [0.13], [0.22], [569],
+  [Accuracy], [-], [-], [0.83], [3160],
+  [Macro avg], [0.75], [0.56], [0.56], [3160],
+  [Weighted avg], [0.81], [0.83], [0.78], [3160],
+)
+_Tab. 4 \ 
+Miary jakości modelu dla zbioru treningowego Próba numer 2._
+\ \
+Wyniki niemalże identyczne jak w przypadku próby 1.
+
+\ \
+Wygenerowano również confusion matrix (macierz pomyłek) która pokazuje jakość przewidywań (obrazuje trafienie, poprawne odrzucenie, chybienie i fałszywe alarmy). Macierze prezentujemy poniżej.
 
 
-== Wyniki osiągnięte przez model
+
+== Wyniki osiągnięte przez model (TODO)
 Wygenerowano wykres ważności cech, w zależności od kontekstu. Konteksty obejmowały: tego szukam u partnera/partnerki (atrybuty xxxx1_1), tego szuka płeć przeciwna (atrybuty xxxx2_1), własna ocena (atrybuty xxxx3_1). Do zakresu analizy dodatno również częstotliwość uczęszczania na randki i imprezy. \
 #figure(
   image("próba 1/importance.png"),
@@ -116,12 +182,12 @@ Wygenerowano wykres ważności cech, w zależności od kontekstu. Konteksty obej
 
 Wygenerowano także macierz pomyłek dla zbiorów: testowego i treningowego.
 #figure(
-  image("próba 1/confusion_matrix_test.png"),
+  image("próba 1/confusion_matrix_test.png", height: 30%),
 	caption: "Macierz pomyłek dla zbioru testowego."
 )
 
 #figure(
-  image("próba 1/confusion_matrix_train.png"),
+  image("próba 1/confusion_matrix_train.png", height: 30%),
 	caption: "Macierz pomyłek dla zbioru treningowego."
 )
 
@@ -133,10 +199,11 @@ Powstało również drzewo decyzyjne, niestety z większością liści dających
 )
 
 
+
 < Opis wyników >
 
 
-= Optymalizacja modelu 
+= Optymalizacja modelu (TODO)
 Przeprowadzono drugie badanie z użyciem tego samego modelu, ale innych parametrów. Tym razem wybrano ocenę chęci zaangażowania się w jakąś aktywność pozanaukową. 
 #figure(
   image("próba 2/importance.png"),
@@ -145,12 +212,12 @@ Przeprowadzono drugie badanie z użyciem tego samego modelu, ale innych parametr
 
 Wygenerowano także macierz pomyłek dla zbiorów: testowego i treningowego.
 #figure(
-  image("próba 2/confusion_matrix_test.png"),
+  image("próba 2/confusion_matrix_test.png", height: 30%),
 	caption: "Macierz pomyłek dla zbioru testowego."
 )
 
 #figure(
-  image("próba 2/confusion_matrix_train.png"),
+  image("próba 2/confusion_matrix_train.png", height: 30%),
 	caption: "Macierz pomyłek dla zbioru treningowego."
 )
 
@@ -166,5 +233,5 @@ Powstało również drzewo decyzyjne, niestety z większością liści dających
 
 
 
-= Wnioski
+= Wnioski (TODO)
 < wnioski końcowe, osiągnięte wyniki, komentarz, jakie parametry były najlepsze >
