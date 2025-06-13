@@ -77,7 +77,7 @@ Kryteria sukcesu, które zostaną przyjęte w celu oceny skuteczności eksplorac
 
 = Założenia wstępne
 Zakładamy, że z racji na olbrzymią ilość kolumn oraz stosunkowo niewielką liczbę wierszy danych najlepiej sprawdzi się klasyfikator oparty na drzewie decyzyjnym. \
-Kolejnym agrumentem za drzewami decyzyjnym jest ich metodyka pracy, przewidują one wartość żądanego atrybutu w oparciu o inne atrybuty i potrafią zbudować ścieżki zależności między parametrami. Odpowie nam to na jedno z pytań - celi.
+Kolejnym argumentem za drzewami decyzyjnym jest ich metodyka pracy, przewidują one wartość żądanego atrybutu w oparciu o inne atrybuty i potrafią zbudować ścieżki zależności między parametrami. Odpowie nam to na jedno z pytań - celi.
 
 
 = Przygotowanie danych
@@ -85,10 +85,10 @@ Kolejnym agrumentem za drzewami decyzyjnym jest ich metodyka pracy, przewidują 
 Nie wystąpiła potrzeba uzupełnienia brakujących danych.
 
 == Zamiana na nominalne/numeryczne
-Dla wybranych cech nie było takiej potrzeby.
+Dla wybranych atrybutów nie było takiej potrzeby.
 
 == Podzbiór danych
-Wybrano dane z wydarzeń speed datingu o numerach: 1-5, 10-11, 15-17. Zdecydowano się na te edycje, gdyż zostały one przeprowadzone w tych samych warunkach a sposób oceniania preferencji polegał na rozdziale 100 punktów między kategorie. W innych edycjach warunki przeprowadzenia eksperymenty były inne, znacznie różniące się. Wybranie innych edycji zakłóciłoby porównywanie wyników i wyciągnięcie rzetelnych wniosków. \
+Wybrano dane z wydarzeń speed datingu o numerach: 1-5, 10-11, 15-17. Zdecydowano się na te edycje, gdyż zostały one przeprowadzone w tych samych warunkach a sposób oceniania preferencji polegał na rozdziale 100 punktów między oceniane kategorie. W innych edycjach warunki przeprowadzenia eksperymenty były inne, znacznie różniące się. Wybranie innych edycji zakłóciłoby porównywanie wyników i wyciągnięcie rzetelnych wniosków. \
 
 = Wyniki i model
 == Krótki opis modelu
@@ -173,8 +173,8 @@ Wygenerowano również confusion matrix (macierz pomyłek) która pokazuje jako�
 
 
 
-== Wyniki osiągnięte przez model
-Wygenerowano wykres ważności cech, w zależności od kontekstu. Konteksty obejmowały: tego szukam u partnera/partnerki (atrybuty xxxx1_1), tego szuka płeć przeciwna (atrybuty xxxx2_1), własna ocena (atrybuty xxxx3_1). Do zakresu analizy dodatno również częstotliwość uczęszczania na randki i imprezy. \
+== Rezultaty pracy modelu
+Wygenerowano wykres ważności cech, w zależności od kontekstu. Konteksty obejmowały: tego szukam u partnera/partnerki (atrybuty xxxx1_1), tego szuka płeć przeciwna (atrybuty xxxx2_1), własna ocena (atrybuty xxxx3_1). Do zakresu analizy dodano również częstotliwość uczęszczania na randki i imprezy jak również zamierzony cel uczestnika spotkania. \
 #figure(
   image("próba 1/importance.png"),
 	caption: "Wykres ważności cech wpływający na przewidywanie, czy uczestnicy przypadną sobie do gustu (match będzie zrealizowany)."
@@ -274,7 +274,7 @@ a. Znacząca większość uczestników (82,6%) nie znalazła dopasowania. Spośr
 a. Clubbing i koncerty były najbardziej cenione, szczególnie wśród osób z wysokimi ocenami w tych kategoriach (≥9,5). Spośród wszystkich udanych dopasowań (550 osób), 101 (18,4%) to osoby z wyraźnym zainteresowaniem clubbingiem i koncertami. W tej grupie skuteczność dopasowania wynosiła ponad 30%, co znacznie przewyższało średnią.
 
 
-== Wnioski odnosnie wykresu rysunek 5
+== Wnioski odnośnie wykresu rysunek 5
 Na wykresie wyraźnie widać, że aktywność najbardziej wpływająca na dopasowanie uczestników to clubbing, który osiągnął wartość aż 12%. Inne aktywności, takie jak wspinaczka, czytanie, zakupy oraz yoga, miały zdecydowanie niższy ale podobny do siebie poziom wpływu, wynoszący 8%-9%. Z kolei aktywności, które najmniej przyczyniały się do dobrego dopasowania, to ćwiczenia fizyczne (poniżej 2%) oraz sztuka i filmy, które miały wartości w przedziale
 2%-2.5%.
 
