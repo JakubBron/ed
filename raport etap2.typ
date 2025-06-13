@@ -227,7 +227,7 @@ Powstało również drzewo decyzyjne, niestety z większością liści dających
 
 
 = Wnioski i wyniki
-== Analiza pierwszej próby
+== Analiza ważności cech z pierwszej próby (rysunek 1)
 Na podstawie analizy _Rysunku 1_ możemy zauważyć, że najważniejsze cechy wpływające na dopasowanie partnerów w eksperymencie speed dating to:
 - Inteligencja płci przeciwnej – jest to najistotniejszy czynnik, z wartością wpływu przekraczającą 10%, co wskazuje, że uczestnicy wysoko cenili tę cechę w poszukiwaniu partnera.
 - Wspólne zainteresowania i hobby – również odgrywały znaczącą rolę, z wartością wpływu bliską 10%, co podkreśla znaczenie wspólnego spędzania czasu i podobnych pasji w budowaniu relacji.
@@ -253,8 +253,29 @@ Poczucie humoru, mimo że nieco mniej istotne niż inteligencja czy zainteresowa
 Z drugiej strony, analizując odpowiedzi z ankiet, zauważono, że pewne oczekiwania uczestników, takie jak przekonanie, że płeć przeciwna poszukuje u nich inteligencji, wspólnych zainteresowań czy szczerości, najrzadziej prowadziły do sukcesu randki. Może to sugerować, że istnieje rozbieżność między tym, co ludzie deklarują jako istotne, a tym, co rzeczywiście kieruje ich decyzjami w praktyce.
 
 \ \ 
+== Wnioski dotyczące drzewa decyzyjnego pierwszej próby (rysunek 4)
+Drzewo decyzyjne pozwala zaobserwować kilka interesujących wzorców dotyczących grup osób, którym udało się znaleźć dopasowanie:
+1. Największa grupa z sukcesem w dopasowaniu (27.2% z 452 osób):
+a. W tej grupie znalazły się osoby, które randkowały częściej niż dwa razy w miesiącu (date ≤ 3.5). \
+b. Sugeruje to, że częstsze randkowanie może zwiększać szanse na sukces w eksperymencie speed dating, być może z powodu większego doświadczenia i otwartości na nowe znajomości.
+\ \
+2. Wysoka skuteczność dopasowania w niewielkiej grupie (77.8% z 9 osób):
+a. Osoby te umawiały się na randki z umiarkowaną częstotliwością (1-2 razy w miesiącu). \
+b. Ceniły poczucie humoru na bardzo wysokim poziomie (>37.5/100 punktów). \
+c. Choć liczba osób w tej grupie była mała, pokazuje to znaczenie cech  osobowościowych, takich jak humor, w budowaniu udanych relacji. 
+\ \
+3. Znacząca grupa z dobrą skutecznością dopasowania (62.8% z 43 osób):
+a. Często uczestniczyli w imprezach (więcej niż dwa razy w miesiącu). \
+b. Cenili wspólne zainteresowania na umiarkowanym poziomie (7-9.545 punktów).\
+c. Doceniali inteligencję partnera na wysokim poziomie (>19/100 punktów). \
+d. Grupa ta charakteryzuje się wyważonymi preferencjami, gdzie różnorodne cechy – od otwartości społecznej po intelektualne – współgrały w procesie dopasowania. \
 
-== Wnioski dotyczące drzewa decyzyjnego drugiej próby (rysunek 8):
+== Analiza ważności atrybutów z drugiej próby (rysunek 5)
+Na wykresie wyraźnie widać, że aktywność najbardziej wpływająca na dopasowanie uczestników to clubbing, który osiągnął wartość aż 12%. Inne aktywności, takie jak wspinaczka, czytanie, zakupy oraz yoga, miały zdecydowanie niższy ale podobny do siebie poziom wpływu, wynoszący 8%-9%. Z kolei aktywności, które najmniej przyczyniały się do dobrego dopasowania, to ćwiczenia fizyczne (poniżej 2%) oraz sztuka i filmy, które miały wartości w przedziale
+2%-2.5%.
+
+
+== Wnioski dotyczące drzewa decyzyjnego drugiej próby (rysunek 8)
 1. Znaczenie zainteresowań:
 a.  Kluczowe cechy wpływające na decyzje o wyborze partnera to zainteresowanie clubbingiem i koncertami. Osoby o wysokim zainteresowaniu clubbingiem (>9,5/10) stanowiły liczną grupę, z dużą skutecznością dopasowania wynoszącą 42%. Są to zwykle osoby energiczne i spontaniczne, dla których format krótkich spotkań był atrakcyjny.
 \ \
@@ -274,9 +295,14 @@ a. Znacząca większość uczestników (82,6%) nie znalazła dopasowania. Spośr
 a. Clubbing i koncerty były najbardziej cenione, szczególnie wśród osób z wysokimi ocenami w tych kategoriach (≥9,5). Spośród wszystkich udanych dopasowań (550 osób), 101 (18,4%) to osoby z wyraźnym zainteresowaniem clubbingiem i koncertami. W tej grupie skuteczność dopasowania wynosiła ponad 30%, co znacznie przewyższało średnią.
 
 
-== Wnioski odnośnie wykresu rysunek 5
-Na wykresie wyraźnie widać, że aktywność najbardziej wpływająca na dopasowanie uczestników to clubbing, który osiągnął wartość aż 12%. Inne aktywności, takie jak wspinaczka, czytanie, zakupy oraz yoga, miały zdecydowanie niższy ale podobny do siebie poziom wpływu, wynoszący 8%-9%. Z kolei aktywności, które najmniej przyczyniały się do dobrego dopasowania, to ćwiczenia fizyczne (poniżej 2%) oraz sztuka i filmy, które miały wartości w przedziale
-2%-2.5%.
 
 = Podsumowanie
-Z naszej analizy wynika, że aktywności związane z dynamiką i spontanicznością, takie jak clubbing czy wspinaczka, bardziej sprzyjały dopasowaniu partnerów. Natomiast bardziej indywidualne zainteresowania, jak sztuka czy ćwiczenia, miały niewielki wpływ na sukces w eksperymencie, co może wskazywać na ich mniejszą rolę w budowaniu relacji podczas krótkich spotkań.
+Z naszej analizy wynika, że aktywności związane z dynamiką i spontanicznością, takie jak clubbing czy wspinaczka, bardziej sprzyjały dopasowaniu partnerów. Natomiast bardziej indywidualne zainteresowania, jak sztuka czy ćwiczenia, miały niewielki wpływ na sukces w eksperymencie, co może wskazywać na ich mniejszą rolę w budowaniu relacji podczas krótkich spotkań. Ponadto, można sformułować kilka postulatów:
+1. Częstotliwość randkowania ma znaczenie
+Zarówno osoby często randkujące (ponad dwa razy w miesiącu), jak i te wybierające randki rzadziej (raz na miesiąc lub dwa), mają swoje unikalne atuty w procesie dopasowania. Wysoka aktywność społeczna może zwiększać szanse na sukces, ale także umiarkowana częstotliwość, połączona z wysokimi cechami osobowości, przynosi efekty.
+
+2. Istnieją cechy osobowości kluczowe dla sukcesu
+Poczucie humoru i inteligencja to cechy, które wyróżniają grupy z wysoką skutecznością dopasowania. Otwarta postawa, zdolność do rozmowy i atrakcyjność intelektualna są wyraźnie cenione przez uczestników eksperymentu.
+
+3. Równowaga między zainteresowaniami:
+Grupy z umiarkowanymi oczekiwaniami wobec wspólnych zainteresowań, ale ceniące imprezy towarzyskie i indywidualne cechy, takie jak inteligencja, osiągały lepsze wyniki. To wskazuje, że zarówno różnorodność cech, jak i balans preferencji mogą odgrywać kluczową rolę w budowaniu relacji
